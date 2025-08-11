@@ -68,11 +68,30 @@ class Human():
         print("curse",self._curse)
         print("---------------------")
 
+    def print_self2(self,obj):
+        print("----------------------")
+        print("name",obj._name)
+        print("gender",obj._gender)
+        print("ribs",obj._ribs)
+        print("curse",obj._curse)
+        print("---------------------")
 
-# adam=Human(name="adam",gender="Male") #object from a class
+    @classmethod
+    def get_general_info(cls):
+        print("Species",cls.species)
+        print("Species",cls.genus)
+        print("Species",cls.count)
+
+#adam=Human(name="adam",gender="Male") #object from a class
 adam=Human(name="adam",gender="Male")
 eve=Human(name="eve",gender="Female")
 
+# adam.print_self2(obj=adam)
+# eve.print_self2(obj=adam)
+
+# eve.get_general_info()
+
+Human.get_general_info()
 #adam:<HUMAN>-<name and gender -> adam 
 #eve<HUMAN> -> name and gender -> eve
 # print(adam.__class__)
@@ -81,4 +100,4 @@ eve=Human(name="eve",gender="Female")
 # print("eve species",eve.species)
 # print("class property",Human.species)
 
-print("Total humans",Human.count)
+# print("Total humans",Human.count)
